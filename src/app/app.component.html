@@ -1,5 +1,18 @@
 <h1>Componente de prueba</h1>
 
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/hospital" routerLinkActive="active">Hospital</button>
+    <button mat-menu-item routerLink="/medico" routerLinkActive="active">Componente Medico</button>
+</mat-menu>
 
+
+ <!--  -->
+ <!--<app-medico></app-medico>-->
+
+
+
+
+<!-- <app-hospital></app-hospital>-->
 
 <router-outlet></router-outlet>

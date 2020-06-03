@@ -1,1 +1,30 @@
 <p>medico works!</p>
+
+<table mat-table [dataSource]="datos" class="mat-elevation-z8" #tabla1>
+
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let articulo"> {{articulo.nombre}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="localidad">
+        <th mat-header-cell *matHeaderCellDef> Localidad </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.localidad}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="direccion">
+        <th mat-header-cell *matHeaderCellDef> Dirección </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.direccion}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="telefono">
+        <th mat-header-cell *matHeaderCellDef> Teléfono </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.telefono}} </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+
+</table>
+<router-outlet></router-outlet>

@@ -1,1 +1,40 @@
-<p>hospital works!</p>
+
+
+<form [formGroup]='hospitalForm' (ngSubmit)=submit()>
+
+    
+
+    <h3>Datos de Hospital</h3>
+    <div class="Datoshopital">
+        <mat-form-field>
+            <input type="text" matInput formControlName="nombre" placeholder=" Nombre del Hospital ">
+        </mat-form-field>&nbsp;   
+        <mat-form-field>
+            <input type="text" matInput formControlName="localidad" placeholder=" Localidad ">
+        </mat-form-field>&nbsp;
+        <mat-form-field>
+            <input type="text" matInput formControlName="direccion" placeholder=" Dirección ">
+        </mat-form-field>&nbsp;
+        <mat-form-field>
+            <input type="text" matInput formControlName="telefono" placeholder=" Teléfono ">
+        </mat-form-field>&nbsp;
+    </div>
+    
+    <p>
+
+    </p>
+    <ul>
+        <button mat-raised-button color="primary" type="submit" >Guardar</button>
+    </ul>
+</form>
+
+    <!-- 
+    <h2>First Component</h2>
+
+        <nav>
+    <ul>
+        <button mat-raised-button color="primary"  routerLink="paciente">Guardar</button>
+    </ul>
+    </nav>
+    -->
+<router-outlet></router-outlet>
