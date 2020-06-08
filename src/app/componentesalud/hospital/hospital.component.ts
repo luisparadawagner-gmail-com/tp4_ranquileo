@@ -11,35 +11,15 @@ import {Router, ActivatedRoute, ParamMap} from '@angular/router'
 
 export class HospitalComponent implements OnInit {
 
+
+  nombreP :string;
+  localidadP: string;
+  domicilioP: string;
+  telefonoP: string;
+
   constructor(private fb: FormBuilder,private route: ActivatedRoute) {}
 
-  hospitalForm = this.fb.group({
-
-    nombre: [" ", Validators.required],
-    localidad:[''],
-    direccion: [''],
-    telefono:['']
-
-
-  })
-
-  submit() {
-    this.hospitalForm.value;
-
-		this.hospitalForm.setValue({
-			nombre: 'Hospital Heller',
-			localidad: 'Neuquen',
-      direccion: 'Barrio Maronesse',
-      telefono: '299',
-		
-		});
-
-		this.hospitalForm.patchValue({ localidad: 'Neuquen' });
-	}
-
-
-
- numeroParam: Number;
+  numeroParam: Number;
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) =>{

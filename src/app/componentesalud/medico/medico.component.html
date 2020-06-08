@@ -22,8 +22,16 @@
         <td mat-cell *matCellDef="let articulo"> {{articulo.telefono}} </td>
       </ng-container>
 
-
-      <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+      <ng-container matColumnDef="modificar">
+        <th mat-header-cell *matHeaderCellDef> Modificar </th>
+        <td mat-cell *matCellDef="let j = index;">
+          <button mat-raised-button color="primary" focusable="false" (click)="modificarFila(j)">
+            Modificar?
+          </button>
+        </td>
+      </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="columnas"></tr>
   <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
 
 </table>

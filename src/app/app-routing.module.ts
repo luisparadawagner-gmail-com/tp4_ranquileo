@@ -7,12 +7,12 @@ import { PacienteComponent } from './componentesalud/paciente/paciente.component
 
 const routes: Routes = [
 { path: 'hospital', component: HospitalComponent, 
-  // children : [
-  //    {
-  //     path: 'paciente',
-  //    component: PacienteComponent
-  //  }
-  //]
+  children : [
+    {
+     path: 'paciente',
+    component: PacienteComponent
+  }
+  ]
 
 
 },

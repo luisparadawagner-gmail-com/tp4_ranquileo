@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-paciente',
@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paciente.component.css']
 })
 export class PacienteComponent implements OnInit {
+
+  @Input() nombreH: string;
+  @Input() localidadH: string;
+  @Input() domicilioH: string;
+  @Input() telefonoH: string;
 
   constructor() { }
 

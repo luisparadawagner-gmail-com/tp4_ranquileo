@@ -1,40 +1,42 @@
+   
+<h3>Datos de Hospital</h3>
 
 
-<form [formGroup]='hospitalForm' (ngSubmit)=submit()>
 
-    
+<div style="text-align: center;">
+    <label>Nombre Hospital
+        <input (input)= "nombreP = $event.target.value">
+    </label>
+<p></p>
 
-    <h3>Datos de Hospital</h3>
-    <div class="Datoshopital">
-        <mat-form-field>
-            <input type="text" matInput formControlName="nombre" placeholder=" Nombre del Hospital ">
-        </mat-form-field>&nbsp;   
-        <mat-form-field>
-            <input type="text" matInput formControlName="localidad" placeholder=" Localidad ">
-        </mat-form-field>&nbsp;
-        <mat-form-field>
-            <input type="text" matInput formControlName="direccion" placeholder=" Dirección ">
-        </mat-form-field>&nbsp;
-        <mat-form-field>
-            <input type="text" matInput formControlName="telefono" placeholder=" Teléfono ">
-        </mat-form-field>&nbsp;
-    </div>
-    
-    <p>
+<label>Localidad
+    <input (input)= "localidadP = $event.target.value">
+</label>
+<p></p>
 
-    </p>
-    <ul>
-        <button mat-raised-button color="primary" type="submit" >Guardar</button>
-    </ul>
-</form>
+<label>Domicilio 
+    <input (input)= "domicilioP = $event.target.value">
+</label> 
+<p></p>
 
-    <!-- 
-    <h2>First Component</h2>
+<label>Telefono
+    <input (input)= "telefonoP = $event.target.value">
+</label>
+<p></p>
 
-        <nav>
+<nav>
     <ul>
         <button mat-raised-button color="primary"  routerLink="paciente">Guardar</button>
     </ul>
-    </nav>
-    -->
+</nav>
+    
+
+</div>
+
+<!-- <app-paciente [nombreH]= nombreP [localidadH]= localidadP [domicilioH]= domicilioP [telefonoH]=telefonoP> </app-paciente>         
+
+
+-->
+
+      
 <router-outlet></router-outlet>
